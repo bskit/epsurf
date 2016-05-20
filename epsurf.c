@@ -11,11 +11,11 @@
  ********************************************************************************************************************/
  
 #include <stdio.h>
+#include <string.h>
 #include <stdarg.h>
 #include <stdlib.h>
 #include <math.h>
 #include <time.h>
-#include <string.h>
 
 #define STEP     2.00          
 #define MAXLINE  200

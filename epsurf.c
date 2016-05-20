@@ -2,8 +2,8 @@
  *
  *   Program   : epsurf																			
  *   Purpose   : calculate MEP extrema and electronic descriptors on a user defined isodensity surface from two grids
- *   Input     : g98density.cube g98potential.cube edensityisosurface
- *   Output    : .log and .xyx output file - with appended extrema - dumped in cwd SEE README
+ *   Input     : density.cube potential.cube densityisosurface (format g98)
+ *   Output    : .log and .xyz output file - with appended extrema - dumped in cwd SEE README
  *   Usage     : ./epsurf densityfile potentialfile surface
  *   Compiling : gcc -o epsurf epsurf.c -lm -O5
  *   Modified  : 03/Aug/04
@@ -648,15 +648,11 @@ for (i=0; i<numsurf; i++)
 
 } 
 
-/* TODO *****************************************************************************************
- * use vector maths to work out distance and angles between MEP extrema                         *
- * i.e. report geometrical relation of local minima and maxima                                  *
- ************************************************************************************************/
+/* TODO ****************************************************************************************************
+ * calculate distance and angles between MEP extrema, report geometric relation of local minima and maxima *                                 *
+ ***********************************************************************************************************/
 
-/* PROBLEMS **************************************
- *                                               *
- *                                               *
- *************************************************/
-
-
-
+/* BUGS **************************************
+ *                                           *
+ *                                           *
+ *********************************************/

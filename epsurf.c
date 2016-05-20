@@ -1,14 +1,14 @@
-/*******************************************************************************************************************
+/********************************************************************************************************************
  *
  *   Program   : epsurf																			
  *   Purpose   : calculate MEP extrema and electronic descriptors on a user defined isodensity surface from two grids
  *   Input     : density.cube potential.cube densityisosurface (format g98)
- *   Output    : .log and .xyz output file - with appended extrema - dumped in cwd SEE README
+ *   Output    : .log and .xyz - files with appended extrema, written to cwd
  *   Usage     : ./epsurf densityfile potentialfile surface
  *   Compiling : gcc -o epsurf epsurf.c -lm -O5
  *   Modified  : 03/Aug/04
  * 
- *******************************************************************************************************************/
+ ********************************************************************************************************************/
  
 #include <stdio.h>
 #include <stdarg.h>
@@ -23,10 +23,10 @@
 #define MAXCOUNT 10000
 #define B2A      0.5291772
 #define H2KC     627.50956
-#define H2KJ     2625.5     /************************************************************************/
-#define PSLIM    0.000      /* +ve surface limit: +0.035, change to zero to consider entire surface */
-#define NSLIM    0.000      /* -ve surface limit: -0.035                                            */
-#define DEBUG    0          /************************************************************************/
+#define H2KJ     2625.5     /************************************************************
+#define PSLIM    0.000       * +ve surface limit: +0.035, zero considers entire surface *
+#define NSLIM    0.000       * -ve surface limit: -0.035                                *
+#define DEBUG    0           ************************************************************/
 
 int main(int argc, char *argv[])
 {
@@ -90,13 +90,13 @@ int main(int argc, char *argv[])
     return 2;
    }
    
-  /********************************************************
-   * open log file, try to make unique using argv[2 or 3] *
-   ********************************************************/
+  /*****************
+   * open log file *
+   *****************/
  
   flog = fopen(strcat(argv[1],".log"),"w");
    
-   /*******************************************
+  /********************************************
    * get user defined density in numeric form *
    ********************************************/
    
@@ -107,7 +107,7 @@ int main(int argc, char *argv[])
  fscanf(fden, "%d %f %f %f", &numat, &x0, &y0, &z0);
 
  /***************************************
-  * Read grid info - assume cuboid grid *
+  * read grid info - assume cuboid grid *
   ***************************************/
 
  fscanf(fden, "%d %f %f %f", &numx, &xstep, &junk, &junk);
@@ -115,7 +115,7 @@ int main(int argc, char *argv[])
  fscanf(fden, "%d %f %f %f", &numz, &junk, &junk, &zstep);
 
  /******************
-  * Read Atom info *
+  * read atom info *
   ******************/
 
  for(i=0; i<numat; i++)

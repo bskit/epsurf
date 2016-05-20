@@ -15,7 +15,7 @@
 #include <stdlib.h>
 #include <math.h>
 #include <time.h>
-#include <string.h
+#include <string.h>
 
 #define STEP     2.00          
 #define MAXLINE  200

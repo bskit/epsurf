@@ -649,7 +649,7 @@ for (i=0; i<numsurf; i++)
 } 
 
 /* TODO ****************************************************************************************************
- * calculate distance and angles between MEP extrema, report geometric relation of local minima and maxima *                                 *
+ * calculate distance and angles between MEP extrema, report geometric relation of local minima and maxima *
  ***********************************************************************************************************/
 
 /* BUGS **************************************
